@@ -4,12 +4,12 @@
 int main()
 {
     int index = 1;
-    while (index <= 5)
+
+    do
     {
-        printf("%d\n", index);
-        // index = index + 1;
-        index++;
-    }
+       index++;
+       printf("%d", index);
+    } while (index <2);
     
     return 0;
 }
