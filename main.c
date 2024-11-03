@@ -3,14 +3,34 @@
 
 int main()
 {
-    int index = 1;
+    int secretNumber = 8;
+    int guess;
+    int guessCount = 0;
+    int guessLimit = 3;
+    int outOfGuess = 0;
 
-    do
+    while (guess != secretNumber && outOfGuess == 0)
     {
-       index++;
-       printf("%d", index);
-    } while (index <2);
-    
+        if (guessCount < guessLimit)
+        {
+            printf("Enter your gess number: ");
+            scanf("%d", &guess);
+            guessCount++;
+        }
+        else
+        {
+            outOfGuess = 1;
+        }
+    }
+
+    if (outOfGuess == 1)
+    {
+        printf("You lose the game!\n");
+    }
+    else
+    {
+        printf("You Win!\n\n\n");
+    }
+
     return 0;
 }
-
